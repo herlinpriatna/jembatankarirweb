@@ -11,68 +11,75 @@
       src="https://kit.fontawesome.com/e718798741.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body>
-    <nav class="bg-white p-4">
-      <div class="max-w-96 flex items-center justify-between px-5 py-5 mx-auto">
-        <a href="#">
-          <img src="img/logo-jk.jpg" alt="Logo Jembatan Karir" width="45px" />
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
+      >
+        <a href="">
+          <img class="w-12" src="img/logo-jk.jpg" alt="Jembatan Karir" />
         </a>
-
-        <div class="flex items-center justify-between space-x-5">
-          <ul class="flex items-center justify-between">
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Jadi Kerja</a>
             </li>
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Jadi Freelancer</a>
             </li>
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Jadi Mitra</a>
             </li>
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Bantuan</a>
             </li>
           </ul>
         </div>
-        <div class="flex items-center space-x-2">
+        <div class="flex justify-center items-center gap-6">
           <a
-            href="#"
-            class="hover:bg-sky-200 text-gray-800 p-3 rounded font-custom"
+            href=""
+            class="font-custom outline-none rounded-full px-5 py-2 hover:outline-[#55BACC] hover:text-[#55BACC] hover:font-semibold"
             >Daftar</a
           >
           <button
-            class="bg-sky-400 hover:bg-sky-500 text-white font-custom font-semibold p-3 rounded"
+            class="bg-[#55BACC] text-white px-5 py-2 rounded-full hover:bg-[#4DA7B8] font-custom"
           >
             Masuk
           </button>
+          <ion-icon
+            name="menu"
+            onclick="onToggleMenu(this)"
+            class="bg-[#55BACC] text-white p-1 rounded-md text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
-    <section class="container mx-auto border rounded-md py-5 px-5">
-      <div class="px-5 flex justify-start items-center space-x-3 py-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="text-teal-400"
-          height="16"
-          width="14"
-          viewBox="0 0 448 512"
-        >
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-          <path
-            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-          />
-        </svg>
-        <p class="text-base font-custom text-teal-400">Kembali</p>
+    <section class="mx-auto border rounded-xl py-5 px-5 w-3/4">
+      <div class="flex justify-start items-center space-x-3 py-3">
+        <ion-icon
+          name="arrow-back"
+          class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+        ></ion-icon>
+        <p class="text-base font-custom text-[#55BACC]">Kembali</p>
       </div>
       <div class="flex justify-between items-center px-5 py-5">
         <img src="img/bojongsoang.png" alt="Logo Perusahaan" width="80px" />
@@ -82,6 +89,7 @@
               xmlns="http://www.w3.org/2000/svg"
               height="24"
               width="20"
+              class="text-[#55BACC]"
               viewBox="0 0 448 512"
             >
               <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
@@ -106,101 +114,69 @@
         </div>
       </div>
       <div class="inline-block px-3 py-3">
-        <p class="text-2xl font-custom font-bold">Graphic Designer</p>
-        <p class="text-base font-custom">PT IndoNusantara</p>
-        <p class="text-base font-custom">
+        <p class="text-2xl font-custom font-bold py-2">Graphic Designer</p>
+        <a href="#" class="font-custom py-2"> PT IndoNusantara</a>
+        <p class="text-base font-custom py-2">
           Terbuka sampai dengan 25 Desember 2023
         </p>
         <div class="flex justify-start items-center space-x-3 py-2">
-            <i class="fas fa-dollar-sign text-teal-500"></i>
-            <p>Rp2.000.000-Rp5.000.000</p>
+          <i class="fas fa-dollar-sign text-[#55BACC]"></i>
+          <p>Rp2.000.000-Rp5.000.000</p>
         </div>
         <div class="flex justify-start items-center space-x-3 py-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="16"
-            width="12"
-            viewBox="0 0 384 512"
-          >
-            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-            <path
-              d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
-            />
-          </svg>
+          <i class="fas fa-location-dot text-[#55BACC]"></i>
           <p>Bandung, Jawa Barat</p>
         </div>
         <div class="flex justify-start items-center space-x-3 py-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="16"
-            width="12"
-            viewBox="0 0 384 512"
-          >
-            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-            <path
-              d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"
-            />
-          </svg>
+          <i class="fas fa-building text-[#55BACC]"></i>
           <p>Teknologi Informasi</p>
         </div>
         <div class="flex justify-start items-center space-x-3 py-2">
-          <svg
-            class="stroke-teal-500"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            height="16"
-            width="16"
-            viewBox="0 0 512 512"
-          >
-            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-            <path
-              d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
-            />
-          </svg>
+          <i class="fa-solid fa-person-walking-with-cane text-[#55BACC]"></i>
           <p>Tuna Daksa, Tuna Rungu</p>
         </div>
         <div class="flex items-center space-x-2 py-2">
           <button
-            class="bg-teal-400 hover:bg-sky-500 text-white font-custom font-semibold p-3 rounded"
+            class="bg-[#55BACC] hover:bg-[#4495A3] text-white font-custom font-semibold py-2 px-5 rounded"
           >
             Lamar Sekarang
           </button>
           <button
-            class="bg-teal-400 hover:bg-sky-500 text-white font-custom font-semibold p-3 rounded"
+            class="bg-transparent hover:bg-[#55BACC] text-[#55BACC] font-semibold hover:text-white py-2 px-4 border border-[#55BACC] hover:border-transparent rounded"
           >
             Simpan
           </button>
         </div>
       </div>
       <div class="border"></div>
-      <div class="content">
-        <p class="font-custom font-semibold text-lg">Syarat dan Ketentuan</p>
-        <p class="text-base font-custom">
+      <div class="content py-3">
+        <p class="font-custom font-semibold text-lg py-3">Syarat dan Ketentuan</p>
+        <p class="text-base font-custom mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
           deleniti at? Incidunt. Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Suscipit, eaque? Odit architecto corrupti,
           voluptatem consequuntur nesciunt soluta cum! Repellat consectetur
           similique illo nulla accusamus nemo?
         </p>
-        <p class="font-custom font-semibold text-lg">
+        <p class="font-custom font-semibold text-lg py-3">
           Tugas dan Tanggung Jawab
         </p>
-        <p class="text-base font-custom">
+        <p class="text-base font-custom mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
           deleniti at? Incidunt. Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Suscipit, eaque? Odit architecto corrupti,
           voluptatem consequuntur nesciunt soluta cum! Repellat consectetur
           similique illo nulla accusamus nemo?
         </p>
-        <p class="font-custom font-semibold text-lg">Catatan Lainnya</p>
-        <p class="text-base font-custom">
+        <p class="font-custom font-semibold text-lg py-3">Catatan Lainnya</p>
+        <p class="text-base font-custom mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
           deleniti at? Incidunt. Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Suscipit, eaque? Odit architecto corrupti,
           voluptatem consequuntur nesciunt soluta cum! Repellat consectetur
           similique illo nulla accusamus nemo?
         </p>
-        <p class="font-custom font-semibold text-lg">
+        <p class="font-custom font-semibold text-lg py-3">
           Kontak Informasi Perusahaan
         </p>
         <p class="text-base font-custom">

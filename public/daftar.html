@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar | Jembatan Karir</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="md:grid grid-cols-12">
+      <div class="col-span-4">
+        <div class="bg-[#55BACC] h-screen flex flex-col items-start px-5">
+          <img src="img/logo-jk-white.png" alt="" class="mb-4 py-12" />
+          <div class="flex flex-col justify-center items-start py-16">
+            <h1 class="text-3xl font-bold font-custom text-white py-5">
+              Selamat Datang
+            </h1>
+            <p class="text-base text-white font-custom">
+              Sesuaikan referensi Anda untuk mendapatkan apa yang Anda inginkan
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-8 p-10 mx-auto">
+        <div class="mx-auto px-5 py-8 border rounded-lg">
+          <h1 class="px-8 font-bold text-xl md:text-2xl font-custom text-center">Daftar</h1>
+          <p class="px-8 text-sm md:text-base font-custom text-center mt-2">
+            Daftar dengan menggunakan email dan password
+          </p>
+          <form>
+            <!-- Email Field -->
+            <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-600"
+                >Email:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Masukkan Email Anda"
+                class="mt-1 p-2 w-full border rounded-md"
+              />
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-600"
+                >Password:</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Masukkan Password Anda"
+                class="mt-1 p-2 w-full border rounded-md"
+              />
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="mb-6">
+              <label
+                for="confirmPassword"
+                class="block text-sm font-medium text-gray-600"
+                >Konfirmasi Password:</label
+              >
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Konfirmasi Password Anda"
+                class="mt-1 p-2 w-full border rounded-md"
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="bg-[#55ABCC] font-custom text-white p-2 rounded-md w-full"
+            >
+              Daftar
+            </button>
+          </form>
+
+          <div class="text-center py-3">
+            <p class="font-custom text-base">
+              Sudah punya akun?
+              <a
+                href="#"
+                class="font-semibold font-custom cursor-pointer text-[#55ABCC]"
+                >Masuk Disini</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,12 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Lowongan</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e718798741.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
+      >
+        <a href="">
+          <img class="w-12" src="img/logo-jk.jpg" alt="Jembatan Karir" />
+        </a>
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Kerja</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Freelancer</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Mitra</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Bantuan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center gap-6">
+          <a
+            href=""
+            class="font-custom outline-none rounded-full px-5 py-2 hover:outline-[#55BACC] hover:text-[#55BACC] hover:font-semibold"
+            >Daftar</a
+          >
+          <button
+            class="bg-[#55BACC] text-white px-5 py-2 rounded-full hover:bg-[#4DA7B8] font-custom"
+          >
+            Masuk
+          </button>
+          <ion-icon
+            name="menu"
+            onclick="onToggleMenu(this)"
+            class="bg-[#55BACC] text-white p-1 rounded-md text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <section class="mx-auto border rounded-xl py-5 px-5 w-3/4">
+      <div class="flex justify-start items-center space-x-3 py-3">
+        <ion-icon
+          name="arrow-back"
+          class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+        ></ion-icon>
+        <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+      </div>
+      <div
+        class="flex justify-start flex-col md:flex-row items-center px-5 py-5 gap-5"
+      >
+        <div class="w-2/3">
+          <img src="img/lowongan-1.png" alt="" class="w-full" />
+          <!-- <div class="flex gap-4 w-4/5">
+            <img src="img/lowongan-1.png" alt="" class="w-1/3" />
+            <img src="img/lowongan-1.png" alt="" class="w-1/3" />
+            <img src="img/lowongan-1.png" alt="" class="w-1/3" />
+          </div> -->
+        </div>
+
+        <div class="py-3 inline-block">
+          <h3 class="font-custom font-semibold text-xl md:text-2xl">
+            Jasa Desain Logo
+          </h3>
+          <div class="flex justify-start items-center space-x-3 py-2">
+            <i class="fas fa-dollar-sign text-[#55BACC]"></i>
+            <p>Mulai dari Rp250.000</p>
+          </div>
+          <div class="flex justify-start items-center space-x-3 py-2">
+            <i class="fas fa-building text-[#55BACC]"></i>
+            <p>Teknologi Informasi</p>
+          </div>
+          <div class="flex justify-start items-center space-x-3 py-2">
+            <i class="fas fa-location-dot text-[#55BACC]"></i>
+            <p>Bandung, Jawa Barat</p>
+          </div>
+          <div class="flex justify-between items-center space-x-2 py-2">
+            <button
+              class="bg-[#55BACC] hover:bg-[#4495A3] text-white font-custom font-semibold py-2 px-5 rounded"
+            >
+              Ajukan Sekarang
+            </button>
+            <button
+              class="bg-transparent hover:bg-[#55BACC] text-[#55BACC] font-semibold hover:text-white py-2 px-4 border border-[#55BACC] hover:border-transparent rounded"
+            >
+              Simpan
+            </button>
+            <button
+              class="bg-transparent hover:bg-[#55BACC] text-[#55BACC] font-semibold hover:text-white py-2 px-4 border border-[#55BACC] hover:border-transparent rounded"
+            >
+              Bagikan
+            </button>
+          </div>
+          <div class="py-3">
+            <p class="font-custom text-sm md:text-base">
+              Konten tidak layak untuk dipublikasikan?
+              <a class="font-custom font-semibold text-[#55BACC]" href=""
+                >Laporkan Disini</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+        <div class="mt-3 flex">
+          <div id="ringkasan" class="py-3 px-5 border-b-2 hover:border-[#55BACC]">
+            <a
+              href=""
+              class="font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+              >Ringkasan</a
+            >
+          </div>
+          <div id="rating" class="py-3 px-5 border-b-2 hover:border-[#55BACC]">
+            <a href="" class="font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]">Rating & Ulasan</p>
+          </div>
+        </div>
+        <div id="ringkasan" class="py-3">
+          
+          <div class="py-3">
+              <h1>Deskripsi Jasa</h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, quo. Modi quibusdam quidem rem, molestiae, officiis quae eligendi autem assumenda laborum pariatur commodi provident nisi.</p>
+          </div>
+          <div class="py-3">
+              <h1>Paket Jasa</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, quaerat. Dolor maiores sit nulla sapiente nihil molestiae dicta eum tempore illo natus similique, aut aliquam!</p>
+          </div>
+          <div class="py-3">
+              <h1>Ketentuan Pengajuan</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad pariatur voluptate perferendis ex, voluptatem nemo facere, quas mollitia necessitatibus dicta labore assumenda aliquid laborum numquam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-12"></div>
+    <footer class="bg-teal-950">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
+      >
+        <div class="flex flex-col justify-start items-start gap-10">
+          <img class="w-50 max-w-xs" src="img/logo-jembatan-karir.png" />
+          <div class="flex-col justify-start items-center gap-2 flex">
+            <div
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Copyright © 2023 Jembatan Karir ltd.
+            </div>
+            <div
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              All rights reserved
+            </div>
+          </div>
+          <div class="justify-start items-start gap-4 inline-flex">
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Company
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              About us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Blog
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Contact us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Pricing
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Testimonials
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Support
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Help center
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Terms of service
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Legal
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Privacy policy
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Status
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Stay up to date
+          </div>
+          <div class="w-64 h-10 relative">
+            <div
+              class="w-64 h-10 left-0 top-0 absolute opacity-20 bg-white rounded-lg"
+            ></div>
+            <div class="w-4 h-4 left-[225px] top-[11px] absolute"></div>
+            <div
+              class="left-[12px] top-[9px] absolute text-gray-300 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Your email address
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

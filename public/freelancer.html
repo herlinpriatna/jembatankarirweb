@@ -6,84 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freelancer | Jembatan Karir</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body>
-    <nav class="bg-white p-4">
-      <div
-        class="container flex items-center justify-between px-5 py-5 mx-auto"
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
       >
-        <a href="#">
-          <img src="img/logo-jk.jpg" alt="Logo Jembatan Karir" width="45px" />
+        <a href="">
+          <img class="w-12" src="img/logo-jk.jpg" alt="Jembatan Karir" />
         </a>
-
-        <div class="flex items-center justify-between space-x-5">
-          <ul class="flex items-center justify-between">
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Jadi Kerja</a>
             </li>
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Jadi Freelancer</a>
             </li>
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Jadi Mitra</a>
             </li>
             <li
-              class="text-gray-800 p-4 border-b-2 border-transparent hover:border-sky-500 transition"
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
             >
               <a href="#" class="font-custom">Bantuan</a>
             </li>
           </ul>
         </div>
-        <div class="flex items-center space-x-2">
+        <div class="flex justify-center items-center gap-6">
           <a
-            href="#"
-            class="hover:bg-sky-200 text-gray-800 p-3 rounded font-custom"
+            href=""
+            class="font-custom outline-none rounded-full px-5 py-2 hover:outline-[#55BACC] hover:text-[#55BACC] hover:font-semibold"
             >Daftar</a
           >
           <button
-            class="bg-sky-400 hover:bg-sky-500 text-white font-custom font-semibold p-3 rounded"
+            class="bg-[#55BACC] text-white px-5 py-2 rounded-full hover:bg-[#4DA7B8] font-custom"
           >
             Masuk
           </button>
+          <ion-icon
+            name="menu"
+            onclick="onToggleMenu(this)"
+            class="bg-[#55BACC] text-white p-1 rounded-md text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
-    <section class="bg-teal-200 p-5 mx-auto">
+    <section class="bg-[#CAEAEF] p-5 mx-auto">
       <div class="flex justify-center items-center space-x-5">
-        <div class="">
-          <p class="text-l font-custom font-bold text-white">
-            Cari Lowongan Pekerjaan
-          </p>
-          <div class="mx-auto flex justify-start items-center mt-2">
-            <input
-              type="text"
-              class="border border-gray-300 p-3 rounded w-full md:w-80 font-custom"
-              placeholder="Cari Pekerjaan Impianmu"
-            />
-            <button
-              class="bg-sky-400 hover:bg-sky-500 text-white font-custom font-semibold p-3 rounded"
-            >
-              Cari
-            </button>
+        <div class="mx-auto px-6 w-full">
+          <div class="flex justify-start items-center">
+            <p class="text-l font-custom font-bold text-white text-left">
+              Cari Jasa
+            </p>
           </div>
-        </div>
-        <div class="">
-          <p class="text-l font-custom font-bold text-white">Cari Lokasi</p>
-          <div class="mx-auto flex justify-start items-center mt-2">
+          <div class="flex justify-start items-center mt-2">
             <input
               type="text"
-              class="border border-gray-300 p-3 rounded w-full md:w-80 font-custom"
+              class="p-3 rounded w-full md:w-full font-custom"
               placeholder="Cari Pekerjaan Impianmu"
             />
             <button
-              class="bg-sky-400 hover:bg-sky-500 text-white font-custom font-semibold p-3 rounded"
+              class="bg-[#55BACC] hover:bg-[#33707A] text-white font-custom font-semibold p-3 rounded"
             >
               Cari
             </button>
@@ -92,12 +92,16 @@
       </div>
     </section>
 
-    <section class="container mx-auto">
-      <div class="py-5">
-        <p class="font-bold text-2xl font-custom">Lowongan Terbaru</p>
-        <div class="flex justify-between items-center py-5">
+    <section class="py-5 px-5 mx-auto">
+      <div class="px-5 py-5">
+        <p class="font-bold text-xl md:text-2xl font-custom">
+          Postingan Terbaru
+        </p>
+        <div
+          class="px-5 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
           <div
-            class="flex-shrink-0 max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+            class="flex-shrink-0 max-w-sm mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
           >
             <img
               class="w-full h-48 object-cover"
@@ -152,7 +156,7 @@
               </div>
 
               <button
-                class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded"
+                class="bg-[#55BACC] hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded"
               >
                 Lamar Sekarang
               </button>
@@ -215,7 +219,7 @@
               </div>
 
               <button
-                class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded"
+                class="bg-[#55BACC] hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded"
               >
                 Lamar Sekarang
               </button>
@@ -278,7 +282,7 @@
               </div>
 
               <button
-                class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded"
+                class="bg-[#55BACC] hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded"
               >
                 Lamar Sekarang
               </button>
@@ -341,7 +345,7 @@
               </div>
 
               <button
-                class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded"
+                class="bg-[#55BACC] hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded"
               >
                 Lamar Sekarang
               </button>

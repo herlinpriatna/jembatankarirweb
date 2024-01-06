@@ -15,6 +15,7 @@
     "tailwindcss": "^3.4.0"
   },
   "dependencies": {
+    "@ionic/angular": "^7.6.3",
     "flowbite": "^2.2.1"
   }
 }
