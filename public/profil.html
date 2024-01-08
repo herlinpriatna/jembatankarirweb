@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Lowongan</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e718798741.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body class="bg-gray-50 font-custom text-[#252525]">
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
+      >
+        <a href="">
+          <img class="w-12" src="img/logo-jk.jpg" alt="Jembatan Karir" />
+        </a>
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Kerja</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Freelancer</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Mitra</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Bantuan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center gap-6">
+          <a
+            href=""
+            class="font-custom outline-none rounded-full px-5 py-2 hover:outline-[#55BACC] hover:text-[#55BACC] hover:font-semibold"
+            >Daftar</a
+          >
+          <button
+            class="bg-[#55BACC] text-white px-5 py-2 rounded-full hover:bg-[#4DA7B8] font-custom"
+          >
+            Masuk
+          </button>
+          <ion-icon
+            name="menu"
+            onclick="onToggleMenu(this)"
+            class="bg-[#55BACC] text-white p-1 rounded-md text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <section class="flex justify-center items-center px-5 py-5 w-3/4 mx-auto">
+      <div class="flex flex-col md:flex-row w-full gap-5">
+        <div class="w-full md:w-2/5" id="menu">
+          <div
+            class="bg-white mx-auto rounded-md flex justify-start items-center border p-5 gap-5"
+          >
+            <div class="relative bg-gray-200 rounded-full w-5 border p-10">
+              <i class="absolute px-5 py-5 fas fa-edit"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-base md:text-lg font-semibold">HERLIN PRIATNA</p>
+              <p class="text-sm md:text-base">Bandung</p>
+            </div>
+          </div>
+          <div class="bg-white mx-auto rounded-md border mt-5 p-5">
+            <div
+              id="edit-profil-menu"
+              data-content-id="edit-profil-content"
+              class="flex border-b-2 py-5 justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-user"></i>
+              <p class="font-custom md:text-base text-sm">Edit Profil</p>
+            </div>
+            <div
+              id="lengkapi-dokumen-menu"
+              data-content-id="lengkapi-dokumen-content"
+              class="flex border-b-2 py-5 justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-file"></i>
+              <p class="font-custom md:text-base text-sm">Lengkapi Dokumen</p>
+            </div>
+            <div
+              id="riwayat-lamaran-menu"
+              data-content-id="riwayat-lamaran-content"
+              class="flex border-b-2 py-5 justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-briefcase"></i>
+              <p class="font-custom md:text-base text-sm">Riwayat Lamaran</p>
+            </div>
+            <div
+              id="tersimpan-menu"
+              data-content-id="tersimpan-content"
+              class="flex border-b-2 py-5 justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-bookmark"></i>
+              <p class="font-custom md:text-base text-sm">Tersimpan</p>
+            </div>
+            <div
+              id="ubah-sandi-menu"
+              data-content-id="ubah-sandi-content"
+              class="flex border-b-2 py-5 justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-key"></i>
+              <p class="font-custom md:text-base text-sm">Ubah Kata Sandi</p>
+            </div>
+            <a href="">
+              <div
+                class="flex border-b-2 py-5 justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-right-left"></i>
+                <p class="font-custom md:text-base text-sm">
+                  Beralih ke Mode Freelancer
+                </p>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex py-5 justify-start items-center gap-5">
+                <i class="fas fa-right-from-bracket text-red-500"></i>
+                <p class="font-custom md:text-base text-sm text-red-500">
+                  Logout
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="content-container" class="bg-white md:w-3/5">
+          <div
+            id="edit-profil-content"
+            class="border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <div class="flex justify-start items-center space-x-3">
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+            </div>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">
+                Edit Profil
+              </h2>
+              <p class="text-sm md:text-base py-3">
+                Lengkapi profil Anda disini. Pastikan informasi yang Anda
+                masukkan sesuai.
+              </p>
+            </div>
+            <div class="py-3">
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] cursor-pointer active:text-[#4495A3] active:font-semibold"
+              >
+                <i class="fas fa-id-card"></i>
+                <p class="text-sm md:text-base">Data Pribadi</p>
+              </div>
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-align-justify"></i>
+                <p class="text-sm md:text-base">Ringkasan</p>
+              </div>
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-briefcase"></i>
+                <p class="text-sm md:text-base">Pengalaman Kerja</p>
+              </div>
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-person"></i>
+                <p class="text-sm md:text-base">Riwayat Disabilitas</p>
+              </div>
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-graduation-cap"></i>
+                <p class="text-sm md:text-base">Pendidikan</p>
+              </div>
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-shapes"></i>
+                <p class="text-sm md:text-base">Keterampilan</p>
+              </div>
+              <div
+                class="flex justify-start items-center p-3 gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              >
+                <i class="fas fa-circle-check"></i>
+                <p class="text-sm md:text-base">Minat</p>
+              </div>
+            </div>
+          </div>
+          <div
+            id="lengkapi-dokumen-content"
+            class="border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <div class="flex justify-start items-center space-x-3">
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+            </div>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">
+                Lengkapi Dokumen
+              </h2>
+              <p class="text-sm md:text-base py-3">
+                Lengkapi dokumen Anda disini. Pastikan dokumen yang Anda
+                lampirkan sesuai dengan ketentuan.
+              </p>
+            </div>
+            <div class="py-3">
+              <form action="">
+                <div class="mb-4">
+                  <label for="files" class="text-sm md:text-base mb-3 block"
+                    >Unggah CV/Resume</label
+                  >
+                  <div class="border rounded-md text-center p-5">
+                    <input
+                      type="file"
+                      name="files[]"
+                      id="cv"
+                      class="hidden"
+                      multiple
+                    />
+                    <label
+                      for="files"
+                      class="cursor-pointer border bg-[#55BACC] py-2 px-4 rounded-md text-sm md:text-base text-white hover:text-white hover:bg-[#2991B7] transition duration-300 ease-in-out"
+                    >
+                      Pilih File
+                    </label>
+                  </div>
+                  <!-- Display selected file names (optional) -->
+                  <ul id="cv" class="mt-2"></ul>
+                </div>
+                <div class="mb-4">
+                  <label for="files" class="text-sm md:text-base mb-3 block"
+                    >KTP
+                    <span class="text-[#55BACC] font-semibold"
+                      >(Wajib)</span
+                    ></label
+                  >
+                  <div class="border rounded-md text-center p-5">
+                    <input
+                      type="file"
+                      name="files[]"
+                      id="ktp"
+                      class="hidden"
+                      multiple
+                    />
+                    <label
+                      for="ktp"
+                      class="cursor-pointer border bg-[#55BACC] py-2 px-4 rounded-md text-sm md:text-base text-white hover:text-white hover:bg-[#2991B7] transition duration-300 ease-in-out"
+                    >
+                      Pilih File
+                    </label>
+                  </div>
+                  <!-- Display selected file names (optional) -->
+                  <ul id="ktp" class="mt-2"></ul>
+                </div>
+                <div class="mb-4">
+                  <label for="files" class="text-sm md:text-base mb-3 block"
+                    >Surat Keterangan Disabilitas
+                    <span class="text-[#55BACC] font-semibold">(Wajib)</span>
+                  </label>
+                  <div class="border rounded-md text-center p-5">
+                    <input
+                      type="file"
+                      name="files[]"
+                      id="ktp"
+                      class="hidden"
+                      multiple
+                    />
+                    <label
+                      for="ktp"
+                      class="cursor-pointer border bg-[#55BACC] py-2 px-4 rounded-md text-sm md:text-base text-white hover:text-white hover:bg-[#2991B7] transition duration-300 ease-in-out"
+                    >
+                      Pilih File
+                    </label>
+                  </div>
+                  <!-- Display selected file names (optional) -->
+                  <ul id="ktp" class="mt-2"></ul>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div
+            id="riwayat-lamaran-content"
+            class="border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <div class="flex justify-start items-center space-x-3">
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+            </div>
+
+            <h2 class="font-semibold text-xl md:text-2xl mt-3">
+              Riwayat Lamaran
+            </h2>
+            <p class="text-sm md:text-base py-3">
+              Anda dapat melacak status lamaran Anda disini.
+            </p>
+            <div class="flex overflow-auto">
+              <div
+                id="menunggu"
+                class="relative py-3 px-5 border-b-2 hover:border-[#55BACC]"
+              >
+                <a
+                  href=""
+                  class="font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+                  >Sedang Diproses</a
+                >
+              </div>
+              <div
+                id="sedang-dikerjakan"
+                class="py-3 px-5 border-b-2 hover:border-[#55BACC]"
+              >
+                <a
+                  href=""
+                  class="relative font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+                  >Selesai</a
+                >
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="py-5 text-center mx-auto flex justify-center items-center"
+              >
+                <img src="img/empty.png" alt="Kosong" />
+              </div>
+              <p class="text-sm md:text-base font-semibold">
+                Tidak Ada Riwayat Lamaran
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="tersimpan-content"
+            class="border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <div class="flex justify-start items-center space-x-3">
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+            </div>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">Tersimpan</h2>
+              <p class="text-sm md:text-base py-3">
+                Postingan yang Anda simpan akan tampil disini.
+              </p>
+            </div>
+          </div>
+          <div
+            id="ubah-sandi-content"
+            class="content-section bg-white border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <a
+              class="flex justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+            >
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+                Kembali
+              </p>
+            </a>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">
+                Ubah Kata Sandi
+              </h2>
+              <p class="text-sm md:text-base py-3">
+                Ubah kata sandi lama Anda dengan kata sandi baru.
+              </p>
+            </div>
+            <form class="py-3">
+              <!-- Email Field -->
+              <div class="mb-4">
+                <label
+                  for="password-lama"
+                  class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                  >Password Lama</label
+                >
+                <input
+                  type="password"
+                  id="password-lama"
+                  name="email"
+                  placeholder="Masukkan Password Lama Anda"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <!-- Password Field -->
+              <div class="mb-4">
+                <label
+                  for="password-baru"
+                  class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                  >Password Baru</label
+                >
+                <input
+                  type="password"
+                  id="password-baru"
+                  name="password"
+                  placeholder="Masukkan Password Baru Anda"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <!-- Password Field -->
+              <div class="mb-4">
+                <label
+                  for="konfirmasi-password-baru"
+                  class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                  >Konfirmasi Password Baru</label
+                >
+                <input
+                  type="password"
+                  id="konfirmasi-password-baru"
+                  name="password"
+                  placeholder="Konfirmasi Password Baru Anda"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="bg-[#55ABCC] font-custom hover:bg-[#33707A] text-white p-2 rounded-md w-full"
+              >
+                Ubah
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-12"></div>
+    <footer class="bg-teal-950">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
+      >
+        <div class="flex flex-col justify-start items-start gap-10">
+          <img class="w-50 max-w-xs" src="img/logo-jembatan-karir.png" />
+          <div class="flex-col justify-start items-center gap-2 flex">
+            <div
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Copyright © 2023 Jembatan Karir ltd.
+            </div>
+            <div
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              All rights reserved
+            </div>
+          </div>
+          <div class="justify-start items-start gap-4 inline-flex">
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Company
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              About us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Blog
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Contact us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Pricing
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Testimonials
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Support
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Help center
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Terms of service
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Legal
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Privacy policy
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Status
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Stay up to date
+          </div>
+          <div class="w-64 h-10 relative">
+            <div
+              class="w-64 h-10 left-0 top-0 absolute opacity-20 bg-white rounded-lg"
+            ></div>
+            <div class="w-4 h-4 left-[225px] top-[11px] absolute"></div>
+            <div
+              class="left-[12px] top-[9px] absolute text-gray-300 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Your email address
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

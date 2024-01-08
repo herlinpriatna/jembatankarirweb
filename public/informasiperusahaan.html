@@ -17,7 +17,7 @@
     />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+  <body class="bg-gray-50 font-custom">
     <header class="bg-white">
       <nav
         class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
@@ -73,80 +73,37 @@
       </nav>
     </header>
 
-    <section class="border rounded-lg w-3/5 px-5 py-5 mx-auto">
-      <div class="flex justify-start items-center space-x-3 py-3">
-        <ion-icon
-          name="arrow-back"
-          class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
-        ></ion-icon>
-        <p class="text-base font-custom text-[#55BACC]">Kembali</p>
-      </div>
-      <div class="text-center">
-        <h1 class="font-custom font-bold text-xl md:text-2xl">
-          Form Pengajuan
-        </h1>
-      </div>
-      <form enctype="multipart/form-data" method="">
-        <!-- Email Field -->
-        <div class="mb-4">
-          <label
-            for="deskripsi-proyek"
-            class="block md:text-xl font-custom text-sm font-medium text-gray-600"
-            >Deskripsi Proyek</label
-          >
-          <textarea
-            id="deskripsi-proyek"
-            name="deskripsi-proyek"
-            class="mt-1 p-5 w-full border rounded-md"
-          ></textarea>
-        </div>
-
-        <!-- Password Field -->
-        <div class="mb-4">
-          <label
-            for="waktu"
-            class="block md:text-xl font-custom text-sm font-medium text-gray-600"
-            >Password</label
-          >
-          <input
-            type="date"
-            id="waktu"
-            name="waktu"
-            class="mt-1 p-2 w-full border rounded-md"
-          />
-        </div>
-
-        <div class="mb-4">
-          <label for="files" class="text-base font-semibold mb-2 block"
-            >Unggah File (Jika Ada)</label
-          >
-          <input
-            type="file"
-            name="files[]"
-            id="files"
-            class="hidden"
-            multiple
-          />
-          <label
-            for="files"
-            class="cursor-pointer border border-[#55BACC] py-2 px-4 rounded-md text-[#55BACC] hover:bg-[#55BACC] hover:text-white transition duration-300 ease-in-out"
-          >
-            Choose File
-          </label>
-          <!-- Display selected file names (optional) -->
-          <ul id="fileNames" class="mt-2"></ul>
-        </div>
-
-        <!-- Submit Button -->
-        <button
-          type="submit"
-          class="bg-[#55BACC] font-custom hover:bg-[#33707A] text-white p-2 rounded-md w-full"
+    <section
+      class="flex justify-center items-center px-5 py-5 w-3/4 mx-auto"
+      id="informasi-perusahaan"
+    >
+      <div class="flex flex-col md:flex-row w-full gap-5">
+        <div
+          class="bg-white border rounded-md mx-auto gap-5 px-5 py-5 md:w-3/5"
         >
-          Ajukan
-        </button>
-      </form>
+          <a
+            class="flex justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+          >
+            <ion-icon
+              name="arrow-back"
+              class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+            ></ion-icon>
+            <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+              Kembali
+            </p>
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolor
+            voluptas voluptate vel corrupti! Temporibus eos, voluptas
+            perferendis eligendi quibusdam voluptates. Officiis aliquid itaque
+            possimus ipsam, commodi aspernatur totam beatae a dolorum aut labore
+            eius voluptatibus porro nobis ex accusamus odit culpa veniam
+            deleniti est debitis inventore consequuntur molestias adipisci?
+          </p>
+        </div>
+      </div>
     </section>
-
+    <div class="py-12"></div>
     <footer class="bg-teal-950">
       <div
         class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
@@ -260,18 +217,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      // Display selected file names (optional)
-      document.getElementById("files").addEventListener("change", function () {
-        const fileNamesElement = document.getElementById("fileNames");
-        fileNamesElement.innerHTML = "";
-
-        const files = this.files;
-        for (let i = 0; i < files.length; i++) {
-          fileNamesElement.innerHTML += `<li>${files[i].name}</li>`;
-        }
-      });
-    </script>
   </body>
 </html>

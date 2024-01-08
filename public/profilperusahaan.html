@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Lowongan</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e718798741.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body class="bg-gray-50 font-custom">
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
+      >
+        <a href="">
+          <img class="w-12" src="img/logo-jk.jpg" alt="Jembatan Karir" />
+        </a>
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Kerja</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Freelancer</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Jadi Mitra</a>
+            </li>
+            <li
+              class="py-2 border-b-2 border-transparent hover:border-[#55BACC]"
+            >
+              <a href="#" class="font-custom">Bantuan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center gap-6">
+          <a
+            href=""
+            class="font-custom outline-none rounded-full px-5 py-2 hover:outline-[#55BACC] hover:text-[#55BACC] hover:font-semibold"
+            >Daftar</a
+          >
+          <button
+            class="bg-[#55BACC] text-white px-5 py-2 rounded-full hover:bg-[#4DA7B8] font-custom"
+          >
+            Masuk
+          </button>
+          <ion-icon
+            name="menu"
+            onclick="onToggleMenu(this)"
+            class="bg-[#55BACC] text-white p-1 rounded-md text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <section class="flex justify-center items-center px-5 py-5 w-3/4 mx-auto">
+      <div class="flex flex-col md:flex-row w-full gap-5">
+        <div id="menu" class="w-full md:w-2/5 section">
+          <div
+            class="bg-white mx-auto rounded-md flex justify-start items-center border p-5 gap-5"
+          >
+            <div class="relative bg-gray-200 rounded-full w-5 border p-10">
+              <i class="absolute px-5 py-5 fas fa-edit"></i>
+            </div>
+
+            <p class="text-sm md:text-base font-semibold">
+              Pemerintah Desa Bojongsoang
+            </p>
+          </div>
+          <div class="bg-white mx-auto rounded-md border mt-5 p-5">
+            <div
+              id="informasi-perusahaan-menu"
+              data-content-id="informasi-perusahaan-content"
+              class="border-b-2 py-5 flex justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-user"></i>
+              <p class="font-custom md:text-base text-sm">
+                Informasi Perusahaan
+              </p>
+            </div>
+            <div
+              class="border-b-2 py-5 flex justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              id="pesanan-menu"
+              data-content-id="pesanan-content"
+            >
+              <i class="fas fa-receipt"></i>
+              <p class="font-custom md:text-base text-sm">Pesanan</p>
+            </div>
+            <div
+              id="lowongan-menu"
+              class="border-b-2 py-5 flex justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+              data-content-id="lowongan-content"
+            >
+              <i class="fas fa-newspaper"></i>
+              <p class="font-custom md:text-base text-sm">Lowongan Anda</p>
+            </div>
+            <div
+              id="lacak-menu"
+              data-content-id="kelola-content"
+              class="border-b-2 py-5 flex justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-chart-gantt"></i>
+              <p class="font-custom md:text-base text-sm">Kelola Pelamar</p>
+            </div>
+            <div
+              id="ubah-sandi-menu"
+              data-content-id="ubah-sandi-content"
+              class="border-b-2 py-5 flex justify-start items-center gap-5 hover:text-[#55BACC] active:text-[#4495A3] active:font-semibold cursor-pointer"
+            >
+              <i class="fas fa-key"></i>
+              <p class="font-custom md:text-base text-sm">Ubah Kata Sandi</p>
+            </div>
+            <div
+              class="py-5 flex justify-start items-center gap-5 cursor-pointer"
+            >
+              <i class="fas fa-right-from-bracket text-red-500"></i>
+              <p class="font-custom md:text-base text-sm text-red-500">
+                Logout
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="content-container" class="md:w-3/5">
+          <div
+            id="informasi-perusahaan-content"
+            class="content-section bg-white border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <a
+              class="flex justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+            >
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+                Kembali
+              </p>
+            </a>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">
+                Informasi Perusahaan
+              </h2>
+              <p class="text-sm md:text-base py-3">
+                Lengkapi informasi perusahaan Anda disini.
+              </p>
+            </div>
+            <form class="py-3">
+              <!-- Nama Lengkap Field -->
+              <div class="mb-4">
+                <label
+                  for="nama"
+                  class="block text-sm font-medium text-gray-600"
+                  >Nama Perusahaan</label
+                >
+                <input
+                  type="text"
+                  id="nama"
+                  name="nama"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label
+                  for="deksripsi-perusahaan"
+                  class="block text-sm font-medium text-gray-600"
+                  >Deskripsi Perusahaan</label
+                >
+                <textarea
+                  id="deksripsi-perusahaan"
+                  name="deksripsi-perusahaan"
+                  class="mt-1 p-2 w-full border rounded-md"
+                ></textarea>
+              </div>
+              <div class="mb-4">
+                <label
+                  for="email-perusahaan"
+                  class="block text-sm font-medium text-gray-600"
+                  >Email Perusahaan</label
+                >
+                <input
+                  type="email"
+                  id="email-perusahaan"
+                  name="email-perusahaan"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <div class="flex justify-center items-center gap-3">
+                <!-- Jenis Kelamin Field -->
+                <div class="mb-4 w-1/2">
+                  <label
+                    for="sektor-perusahaan"
+                    class="block text-sm font-medium text-gray-600"
+                    >Pilih Sektor</label
+                  >
+                  <select
+                    id="sektor-perusahaan"
+                    name="sektor-perusahaan"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  >
+                    <option value="pria">Teknologi</option>
+                    <option value="wanita">Makanan</option>
+                  </select>
+                </div>
+                <div class="mb-4 w-1/2">
+                  <label
+                    for="notelp"
+                    class="block text-sm font-medium text-gray-600"
+                    >Nomor Telepon</label
+                  >
+                  <input
+                    type="number"
+                    id="notelp"
+                    name="notelp"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  />
+                </div>
+              </div>
+
+              <!-- Nomor Handphone Field -->
+              <div class="mb-4">
+                <label
+                  for="urlweb"
+                  class="block text-sm font-medium text-gray-600"
+                  >Website Perusahaan</label
+                >
+                <input
+                  type="url"
+                  id="urlweb"
+                  name="urlweb"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <div class="flex justify-center items-center gap-3">
+                <!-- Pilih Provinsi Field -->
+                <div class="mb-4 w-1/2">
+                  <label
+                    for="provinsi"
+                    class="block text-sm font-medium text-gray-600"
+                    >Pilih Provinsi</label
+                  >
+                  <select
+                    id="provinsi"
+                    name="provinsi"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  >
+                    <!-- Opsi Provinsi -->
+                  </select>
+                </div>
+
+                <!-- Pilih Kota Field -->
+                <div class="mb-4 w-1/2">
+                  <label
+                    for="kota"
+                    class="block text-sm font-medium text-gray-600"
+                    >Pilih Kota</label
+                  >
+                  <select
+                    id="kota"
+                    name="kota"
+                    class="mt-1 p-2 w-full border rounded-md"
+                  >
+                    <!-- Opsi Kota -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Alamat Lengkap Field -->
+              <div class="mb-4">
+                <label
+                  for="alamat"
+                  class="block text-sm font-medium text-gray-600"
+                  >Alamat Lengkap</label
+                >
+                <textarea
+                  id="alamat"
+                  name="alamat"
+                  class="mt-1 p-2 w-full border rounded-md"
+                ></textarea>
+              </div>
+
+              <!-- Checkbox Data Benar -->
+              <div class="mb-4">
+                <input
+                  type="checkbox"
+                  id="dataBenar"
+                  name="dataBenar"
+                  class="mr-2"
+                />
+                <label for="dataBenar" class="text-sm font-medium text-gray-600"
+                  >Data yang saya masukkan sudah benar</label
+                >
+              </div>
+
+              <!-- Tombol Simpan -->
+              <button
+                type="submit"
+                class="bg-[#55ABCC] text-white p-2 rounded-md w-full"
+              >
+                Simpan
+              </button>
+            </form>
+          </div>
+
+          <div
+            id="pesanan-content"
+            class="content-section bg-white border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <a
+              class="flex relative justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+            >
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+                Kembali
+              </p>
+            </a>
+
+            <h2 class="font-semibold text-xl md:text-2xl mt-3">Pesanan Anda</h2>
+            <p class="text-sm md:text-base py-3">
+              Pesanan Anda akan ditampilkan disini
+            </p>
+
+            <div class="flex overflow-auto">
+              <div
+                id="menunggu"
+                class="relative py-3 px-5 border-b-2 hover:border-[#55BACC]"
+              >
+                <a
+                  href=""
+                  class="font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+                  >Menunggu Konfirmasi</a
+                >
+              </div>
+              <div
+                id="sedang-dikerjakan"
+                class="py-3 px-5 border-b-2 hover:border-[#55BACC]"
+              >
+                <a
+                  href=""
+                  class="relative font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+                  >Sedang Dikerjakan</a
+                >
+              </div>
+              <div
+                id="selesai"
+                class="py-3 px-5 border-b-2 hover:border-[#55BACC]"
+              >
+                <a
+                  href=""
+                  class="relative font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+                  >Selesai</a
+                >
+              </div>
+              <div
+                id="dibatalkan"
+                class="py-3 px-5 border-b-2 hover:border-[#55BACC]"
+              >
+                <a
+                  href=""
+                  class="relative font-custom text-sm md:text-base hover:font-semibold hover:text-[#55BACC]"
+                  >Dibatalkan</a
+                >
+              </div>
+            </div>
+
+            <div class="content-container-pesanan py-3">
+              <a href="">
+                <div
+                  id="menunggu"
+                  class="flex border justify-start items-center gap-5 rounded-md p-5"
+                >
+                  <img src="img/klien-2.png" alt="" />
+                  <div class="text-left">
+                    <h3 class="text-base md:text-xl font-semibold">
+                      Jasa Pembuatan Logo
+                    </h3>
+                    <p class="text-sm md:text-base font-thin mt-1">
+                      Menunggu Konfirmasi
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="lowongan-content"
+            class="content-section bg-white border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <a
+              class="flex justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+            >
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+                Kembali
+              </p>
+            </a>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">
+                Lowongan Anda
+              </h2>
+
+              <p class="text-sm md:text-base py-3">
+                Anda dapat melakukan edit terhadap lowongan yang Anda miliki
+                disini.
+              </p>
+              <div class="flex justify-between gap-3 items-center mb-3">
+                <div class="mx-auto">
+                  <div class="flex justify-start items-center">
+                    <input
+                      type="text"
+                      class="p-2 text-sm md:text-base rounded border w-full md:w-full font-custom"
+                      placeholder="Cari Lowongan Anda"
+                    />
+                    <button
+                      class="bg-[#55BACC] text-sm md:text-base hover:bg-[#33707A] text-white font-custom font-semibold p-2 rounded"
+                    >
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="mx-auto">
+                  <button
+                    class="bg-[#55BACC] hover:bg-[#33707A] text-white text-sm md:text-base font-bold p-2 rounded"
+                  >
+                    <i class="fas fa-add"></i>
+                    Buat Lowongan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-start items-center gap-5 py-5 overflow-auto"
+            >
+              <div
+                class="flex-shrink-0 max-w-sm mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  class="w-full h-32 object-cover"
+                  src="img/lowongan-1.png"
+                  alt="Product Image"
+                />
+                <div class="p-3">
+                  <h2
+                    class="font-semibold text-base md:text-lg text-gray-800 mb-2"
+                  >
+                    Digital Marketing
+                  </h2>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="12"
+                      viewBox="0 0 384 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Jakarta, Indonesia
+                    </p>
+                  </div>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Tuna Daksa, Tuna Rungu
+                    </p>
+                  </div>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="14"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      31 Desember 2023
+                    </p>
+                  </div>
+
+                  <button
+                    class="bg-[#55BACC] text-sm md:text-base hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded w-full"
+                  >
+                    <i class="fas fa-edit"></i>
+                    Edit Lowongan
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex-shrink-0 max-w-sm mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  class="w-full h-32 object-cover"
+                  src="img/lowongan-1.png"
+                  alt="Product Image"
+                />
+                <div class="p-3">
+                  <h2
+                    class="font-semibold text-base md:text-lg text-gray-800 mb-2"
+                  >
+                    Digital Marketing
+                  </h2>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="12"
+                      viewBox="0 0 384 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Jakarta, Indonesia
+                    </p>
+                  </div>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Tuna Daksa, Tuna Rungu
+                    </p>
+                  </div>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="14"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      31 Desember 2023
+                    </p>
+                  </div>
+
+                  <button
+                    class="bg-[#55BACC] text-sm md:text-base hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded w-full"
+                  >
+                    <i class="fas fa-edit"></i>
+                    Edit Lowongan
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex-shrink-0 max-w-sm mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  class="w-full h-32 object-cover"
+                  src="img/lowongan-1.png"
+                  alt="Product Image"
+                />
+                <div class="p-3">
+                  <h2
+                    class="font-semibold text-base md:text-lg text-gray-800 mb-2"
+                  >
+                    Digital Marketing
+                  </h2>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="12"
+                      viewBox="0 0 384 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Jakarta, Indonesia
+                    </p>
+                  </div>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      Tuna Daksa, Tuna Rungu
+                    </p>
+                  </div>
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="14"
+                      viewBox="0 0 448 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      31 Desember 2023
+                    </p>
+                  </div>
+
+                  <button
+                    class="bg-[#55BACC] text-sm md:text-base hover:bg-[#33707A] text-white font-bold py-2 px-4 rounded w-full"
+                  >
+                    <i class="fas fa-edit"></i>
+                    Edit Lowongan
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="kelola-content"
+            class="content-section bg-white border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <a
+              class="flex relative justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+            >
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+                Kembali
+              </p>
+            </a>
+
+            <h2 class="font-semibold text-xl md:text-2xl mt-3">
+              Kelola Lamaran
+            </h2>
+            <p class="text-sm md:text-base py-3">
+              Kelola pelamar dan temukan kandidat pelamar terbaik disini.
+            </p>
+
+            <div class="statistics flex py-3 gap-5">
+              <div
+                class="border rounded-md p-5 text-center w-1/2 bg-[#55BACC] text-white border-[#55BACC] my-auto"
+              >
+                <p class="text-sm md:text-base">Jumlah Lowongan Anda</p>
+                <p class="text-xl md:text-2xl font-semibold">2</p>
+                <p class="text-xs md:text-sm font-thin">Lowongan</p>
+              </div>
+              <div
+                class="border rounded-md p-5 text-center w-1/2 text-white bg-[#55BACC] border-[#55BACC] my-auto"
+              >
+                <p class="text-sm md:text-base">Lamaran Masuk</p>
+                <p class="text-xl md:text-2xl font-semibold">200</p>
+                <p class="text-xs md:text-sm font-thin">Pelamar</p>
+              </div>
+            </div>
+            <div
+              class="border-t-2 flex justify-start items-center gap-5 overflow-auto"
+            >
+              <div
+                class="mt-3 flex-shrink-0 max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  class="w-full h-32 object-cover"
+                  src="img/lowongan-1.png"
+                  alt="Product Image"
+                />
+                <div class="p-3">
+                  <h2
+                    class="font-semibold text-base md:text-lg text-gray-800 mb-2"
+                  >
+                    Digital Marketing
+                  </h2>
+
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      200 Pelamar
+                    </p>
+                  </div>
+
+                  <button
+                    class="bg-[#55BACC] hover:bg-[#33707A] text-white text-sm md:text-base font-bold py-2 px-4 rounded w-full"
+                  >
+                    Kelola Pelamar
+                  </button>
+                </div>
+              </div>
+              <div
+                class="mt-3 flex-shrink-0 max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  class="w-full h-32 object-cover"
+                  src="img/lowongan-1.png"
+                  alt="Product Image"
+                />
+                <div class="p-3">
+                  <h2
+                    class="font-semibold text-base md:text-lg text-gray-800 mb-2"
+                  >
+                    Digital Marketing
+                  </h2>
+
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      200 Pelamar
+                    </p>
+                  </div>
+
+                  <button
+                    class="bg-[#55BACC] hover:bg-[#33707A] text-white text-sm md:text-base font-bold py-2 px-4 rounded w-full"
+                  >
+                    Kelola Pelamar
+                  </button>
+                </div>
+              </div>
+              <div
+                class="mt-3 flex-shrink-0 max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  class="w-full h-32 object-cover"
+                  src="img/lowongan-1.png"
+                  alt="Product Image"
+                />
+                <div class="p-3">
+                  <h2
+                    class="font-semibold text-base md:text-lg text-gray-800 mb-2"
+                  >
+                    Digital Marketing
+                  </h2>
+
+                  <div class="flex items-center mb-4 space-x-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 512 512"
+                    >
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                      <path
+                        d="M176 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-8.4 32c-36.4 0-69.6 20.5-85.9 53.1L35.4 273.7c-7.9 15.8-1.5 35 14.3 42.9s35 1.5 42.9-14.3L128 231.6v43.2c0 17 6.7 33.3 18.7 45.3L224 397.3V480c0 17.7 14.3 32 32 32s32-14.3 32-32V390.6c0-12.7-5.1-24.9-14.1-33.9L224 306.7V213.3l70.4 93.9c10.6 14.1 30.7 17 44.8 6.4s17-30.7 6.4-44.8L268.8 166.4C250.7 142.2 222.2 128 192 128H167.6zM128.3 346.8L97 472.2c-4.3 17.1 6.1 34.5 23.3 38.8s34.5-6.1 38.8-23.3l22-88.2-52.8-52.8zM450.8 505.1c5 7.3 15 9.1 22.3 4s9.1-15 4-22.3L358.9 316.1c-2.8 3.8-6.1 7.3-10.1 10.3c-5 3.8-10.5 6.4-16.2 7.9L450.8 505.1z"
+                      />
+                    </svg>
+                    <p class="text-gray-600 text-sm md:text-base">
+                      200 Pelamar
+                    </p>
+                  </div>
+
+                  <button
+                    class="bg-[#55BACC] hover:bg-[#33707A] text-white text-sm md:text-base font-bold py-2 px-4 rounded w-full"
+                  >
+                    Kelola Pelamar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="ubah-sandi-content"
+            class="content-section bg-white border rounded-md mx-auto gap-5 px-5 py-5"
+          >
+            <a
+              class="flex justify-start items-center space-x-3 active:text-[#4495A3] active:font-semibold"
+            >
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC] cursor-pointer">
+                Kembali
+              </p>
+            </a>
+            <div class="border-b-2">
+              <h2 class="font-semibold text-xl md:text-2xl mt-3">
+                Ubah Kata Sandi
+              </h2>
+              <p class="text-sm md:text-base py-3">
+                Ubah kata sandi lama Anda dengan kata sandi baru.
+              </p>
+            </div>
+            <form class="py-3">
+              <!-- Email Field -->
+              <div class="mb-4">
+                <label
+                  for="password-lama"
+                  class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                  >Password Lama</label
+                >
+                <input
+                  type="password"
+                  id="password-lama"
+                  name="email"
+                  placeholder="Masukkan Password Lama Anda"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <!-- Password Field -->
+              <div class="mb-4">
+                <label
+                  for="password-baru"
+                  class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                  >Password Baru</label
+                >
+                <input
+                  type="password"
+                  id="password-baru"
+                  name="password"
+                  placeholder="Masukkan Password Baru Anda"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <!-- Password Field -->
+              <div class="mb-4">
+                <label
+                  for="konfirmasi-password-baru"
+                  class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                  >Konfirmasi Password Baru</label
+                >
+                <input
+                  type="password"
+                  id="konfirmasi-password-baru"
+                  name="password"
+                  placeholder="Konfirmasi Password Baru Anda"
+                  class="mt-1 p-2 w-full border rounded-md"
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="bg-[#55ABCC] font-custom hover:bg-[#33707A] text-white p-2 rounded-md w-full"
+              >
+                Ubah
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-12"></div>
+    <footer class="bg-teal-950">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
+      >
+        <div class="flex flex-col justify-start items-start gap-10">
+          <img class="w-50 max-w-xs" src="img/logo-jembatan-karir.png" />
+          <div class="flex-col justify-start items-center gap-2 flex">
+            <div
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Copyright © 2023 Jembatan Karir ltd.
+            </div>
+            <div
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              All rights reserved
+            </div>
+          </div>
+          <div class="justify-start items-start gap-4 inline-flex">
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+            <div class="w-8 h-8 relative"></div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Company
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              About us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Blog
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Contact us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Pricing
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Testimonials
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Support
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Help center
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Terms of service
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Legal
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Privacy policy
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Status
+            </div>
+          </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Stay up to date
+          </div>
+          <div class="w-64 h-10 relative">
+            <div
+              class="w-64 h-10 left-0 top-0 absolute opacity-20 bg-white rounded-lg"
+            ></div>
+            <div class="w-4 h-4 left-[225px] top-[11px] absolute"></div>
+            <div
+              class="left-[12px] top-[9px] absolute text-gray-300 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Your email address
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      $(document).ready(function () {
+        // Show Informasi Perusahaan content by default
+        $("#content-container").children().hide();
+        $("#informasi-perusahaan-content").show();
+
+        
+        // Add click event listener to each menu item
+        $("#menu [data-content-id]").on("click", function () {
+          // Hide all content sections
+          $(".content-section").hide();
+
+          // Get the content ID associated with the clicked menu item
+          var contentId = $(this).data("content-id");
+
+          // Show the corresponding content section
+          $("#" + contentId).show();
+        });
+
+        // Add resize event listener to handle window size changes
+      });
+    </script>
+  </body>
+</html>

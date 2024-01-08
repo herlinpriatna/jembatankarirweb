@@ -17,7 +17,7 @@
     />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+  <body class="bg-gray-50">
     <header class="bg-white">
       <nav
         class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
@@ -73,80 +73,111 @@
       </nav>
     </header>
 
-    <section class="border rounded-lg w-3/5 px-5 py-5 mx-auto">
-      <div class="flex justify-start items-center space-x-3 py-3">
-        <ion-icon
-          name="arrow-back"
-          class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
-        ></ion-icon>
-        <p class="text-base font-custom text-[#55BACC]">Kembali</p>
-      </div>
-      <div class="text-center">
-        <h1 class="font-custom font-bold text-xl md:text-2xl">
-          Form Pengajuan
-        </h1>
-      </div>
-      <form enctype="multipart/form-data" method="">
-        <!-- Email Field -->
-        <div class="mb-4">
-          <label
-            for="deskripsi-proyek"
-            class="block md:text-xl font-custom text-sm font-medium text-gray-600"
-            >Deskripsi Proyek</label
-          >
-          <textarea
-            id="deskripsi-proyek"
-            name="deskripsi-proyek"
-            class="mt-1 p-5 w-full border rounded-md"
-          ></textarea>
-        </div>
+    <section class="flex justify-center items-center px-5 py-5 w-3/4 mx-auto">
+      <div class="flex flex-col md:flex-row w-full gap-5">
+        <div class="w-full md:w-2/5">
+          <div class="bg-white mx-auto rounded-md border mt-5 p-5">
+            <div class="flex justify-start items-center space-x-3 mb-3">
+              <ion-icon
+                name="arrow-back"
+                class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+              ></ion-icon>
+              <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+            </div>
+            <h1 class="font-custom font-bold text-xl md:text-2xl py-3">Chat</h1>
+            <div class="flex items-center">
+              <input
+                type="text"
+                class="border rounded-full w-full border-gray-300 p-2 rounded-l-md focus:outline-none"
+                placeholder="  Cari"
+              />
+            </div>
 
-        <!-- Password Field -->
-        <div class="mb-4">
-          <label
-            for="waktu"
-            class="block md:text-xl font-custom text-sm font-medium text-gray-600"
-            >Password</label
-          >
-          <input
-            type="date"
-            id="waktu"
-            name="waktu"
-            class="mt-1 p-2 w-full border rounded-md"
-          />
+            <a href="">
+              <div class="flex p-5 justify-start items-center gap-5 border-b-2">
+                <img src="img/klien-1.png" alt="" class="" />
+                <p class="font-custom font-semibold text-sm md:text-base">
+                  Si Fulan
+                </p>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex p-5 justify-start items-center gap-5 border-b-2">
+                <img src="img/klien-1.png" alt="" class="" />
+                <p class="font-custom font-semibold text-sm md:text-base">
+                  Si Fulan
+                </p>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex p-5 justify-start items-center gap-5 border-b-2">
+                <img src="img/klien-1.png" alt="" class="" />
+                <p class="font-custom font-semibold text-sm md:text-base">
+                  Si Fulan
+                </p>
+              </div>
+            </a>
+            <a href="">
+              <div class="flex p-5 justify-start items-center gap-5 border-b-2">
+                <img src="img/klien-1.png" alt="" class="" />
+                <p class="font-custom font-semibold text-sm md:text-base">
+                  Si Fulan
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-
-        <div class="mb-4">
-          <label for="files" class="text-base font-semibold mb-2 block"
-            >Unggah File (Jika Ada)</label
-          >
-          <input
-            type="file"
-            name="files[]"
-            id="files"
-            class="hidden"
-            multiple
-          />
-          <label
-            for="files"
-            class="cursor-pointer border border-[#55BACC] py-2 px-4 rounded-md text-[#55BACC] hover:bg-[#55BACC] hover:text-white transition duration-300 ease-in-out"
-          >
-            Choose File
-          </label>
-          <!-- Display selected file names (optional) -->
-          <ul id="fileNames" class="mt-2"></ul>
-        </div>
-
-        <!-- Submit Button -->
-        <button
-          type="submit"
-          class="bg-[#55BACC] font-custom hover:bg-[#33707A] text-white p-2 rounded-md w-full"
+        <div
+          class="border rounded-md mx-auto gap-5 px-5 py-5 w-full md:w-3/5 bg-white"
         >
-          Ajukan
-        </button>
-      </form>
-    </section>
+          <div class="flex justify-start items-center space-x-3">
+            <ion-icon
+              name="arrow-back"
+              class="text-[#55BACC] rounded-md text-3xl cursor-pointer"
+            ></ion-icon>
+            <p class="text-base font-custom text-[#55BACC]">Kembali</p>
+          </div>
+          <div class="flex items-center border-t border-gray-300 p-4">
+            <!-- Emoji icon -->
+            <button class="mr-2">
+              <!-- You can replace the emoji icon with your desired icon -->
+              <span class="text-xl">😊</span>
+            </button>
 
+            <!-- File upload icon -->
+            <label for="fileInput" class="mr-2 cursor-pointer">
+              <!-- You can replace the file icon with your desired icon -->
+              <span class="text-xl">📎</span>
+              <input type="file" id="fileInput" class="hidden" />
+            </label>
+
+            <!-- Image upload icon -->
+            <label for="imageInput" class="mr-2 cursor-pointer">
+              <!-- You can replace the image icon with your desired icon -->
+              <span class="text-xl">📷</span>
+              <input type="file" id="imageInput" class="hidden" />
+            </label>
+
+            <!-- Chat input box with icons -->
+            <div class="flex-1 relative">
+              <input
+                type="text"
+                placeholder="Type your message..."
+                class="border border-gray-300 p-2 rounded-l-md w-full focus:outline-none hidden"
+              />
+              <!-- Send icon inside input field -->
+              <button
+                class="absolute top-0 right-0 bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600 focus:outline-none"
+              >
+                <!-- You can replace the send icon with your desired icon -->
+                <span class="text-xl">➤</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-12"></div>
     <footer class="bg-teal-950">
       <div
         class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
@@ -260,18 +291,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      // Display selected file names (optional)
-      document.getElementById("files").addEventListener("change", function () {
-        const fileNamesElement = document.getElementById("fileNames");
-        fileNamesElement.innerHTML = "";
-
-        const files = this.files;
-        for (let i = 0; i < files.length; i++) {
-          fileNamesElement.innerHTML += `<li>${files[i].name}</li>`;
-        }
-      });
-    </script>
   </body>
 </html>
