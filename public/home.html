@@ -10,11 +10,80 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/e718798741.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700&family=Quicksand:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+      var cont = 0;
+      function loopSlider() {
+        var xx = setInterval(function () {
+          switch (cont) {
+            case 0: {
+              $("#slider-1").fadeOut(400);
+              $("#slider-2").delay(400).fadeIn(400);
+              $("#sButton1").removeClass("bg-[#CAEAEF]");
+              $("#sButton2").addClass("bg-[#55BACC]");
+              cont = 1;
+
+              break;
+            }
+            case 1: {
+              $("#slider-2").fadeOut(400);
+              $("#slider-1").delay(400).fadeIn(400);
+              $("#sButton2").removeClass("bg-[#CAEAEF]");
+              $("#sButton1").addClass("bg-[#55BACC]");
+
+              cont = 0;
+
+              break;
+            }
+          }
+        }, 8000);
+      }
+
+      function reinitLoop(time) {
+        clearInterval(xx);
+        setTimeout(loopSlider(), time);
+      }
+
+      function sliderButton1() {
+        $("#slider-2").fadeOut(400);
+        $("#slider-1").delay(400).fadeIn(400);
+        $("#sButton2").removeClass("bg-[#CAEAEF]");
+        $("#sButton1").addClass("bg-[#55BACC]");
+        reinitLoop(4000);
+        cont = 0;
+      }
+
+      function sliderButton2() {
+        $("#slider-1").fadeOut(400);
+        $("#slider-2").delay(400).fadeIn(400);
+        $("#sButton1").removeClass("bg-[#CAEAEF]");
+        $("#sButton2").addClass("bg-[#55BACC]");
+        reinitLoop(4000);
+        cont = 1;
+      }
+
+      $(window).ready(function () {
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-[#55BACC]");
+
+        loopSlider();
+      });
+    </script>
   </head>
-  <body>
-    <header class="bg-white">
+  <body class="font-custom text-sm md:text-base">
+    <header
+      class="px-12 bg-white fixed w-full z-50 transition-all duration-300"
+    >
       <nav
         class="flex justify-between items-center w-[92%] bg-white mx-auto py-5"
       >
@@ -69,9 +138,9 @@
       </nav>
     </header>
 
-    <section class="py-5 flex justify-center">
+    <section class="px-12 py-12 flex justify-center">
       <div
-        class="relative flex gap-5 flex-col justify-center items-center md:flex-row"
+        class="mt-12 flex gap-5 flex-col justify-center items-center md:flex-row"
       >
         <div class="py-5 px-5">
           <img
@@ -101,14 +170,14 @@
             <button
               class="bg-[#55BACC] text-white px-5 py-2 rounded hover:bg-[#4DA7B8] font-custom"
             >
-              Masuk
+              Cari
             </button>
           </div>
         </div>
       </div>
     </section>
-    <section class="px-5 relative">
-      <div class="px-5 py-5 text-center">
+    <section class="px-12 py-12">
+      <div class="text-center">
         <h2 class="font-custom font-bold text-xl md:text-2xl xl:text-3xl">
           Mengapa Harus Jembatan Karir
         </h2>
@@ -118,76 +187,80 @@
         </p>
       </div>
       <div
-        class="px-5 py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
       >
         <div
-          class="px-5 max-w-sm rounded overflow-hidden shadow-lg mx-auto text-center"
+          class="px-5 max-w-sm rounded-xl overflow-hidden shadow-lg mx-auto text-center"
         >
           <img
             class="max-w-sm mx-auto"
             src="img/alasan-1.png"
-            alt="Gambar Card"
+            alt="embrace uniqueness"
           />
-          <div class="px-6 py-4">
-            <div class="font-custom font-bold text-xl mb-2">Judul Card</div>
-            <p class="text-gray-700 text-base font-custom">
-              Deskripsi singkat mengenai card ini. Anda dapat menambahkan
-              beberapa kalimat untuk memberikan informasi lebih lanjut.
+          <div class="px-6 py-5">
+            <div class="font-custom font-semibold text-lg md:text-xl mb-2">
+              Merangkul Keunikanmu
+            </div>
+            <p class="text-gray-700 text-sm md:text-base font-custom">
+              Menyediakan berbagai pekerjaan yang sesuai dengan keunikanmu
             </p>
           </div>
         </div>
         <div
-          class="px-5 max-w-sm rounded overflow-hidden shadow-lg mx-auto text-center"
+          class="px-5 max-w-sm rounded-xl overflow-hidden shadow-lg mx-auto text-center"
         >
           <img
             class="max-w-sm mx-auto"
-            src="img/alasan-1.png"
-            alt="Gambar Card"
+            src="img/alasan-2.png"
+            alt="varieties"
           />
-          <div class="px-6 py-4">
-            <div class="font-custom font-bold text-xl mb-2">Judul Card</div>
-            <p class="text-gray-700 text-base font-custom">
-              Deskripsi singkat mengenai card ini. Anda dapat menambahkan
-              beberapa kalimat untuk memberikan informasi lebih lanjut.
+          <div class="px-6 py-5">
+            <div class="font-custom font-semibold text-lg md:text-xl mb-2">
+              Kerja Sebagai Freelancer
+            </div>
+            <p class="text-gray-700 text-sm md:text-base font-custom">
+              Memberikan akses yang mudah bagi Anda seorang freelancer.
             </p>
           </div>
         </div>
         <div
-          class="px-5 max-w-sm rounded overflow-hidden shadow-lg mx-auto text-center"
+          class="px-5 max-w-sm rounded-xl overflow-hidden shadow-lg mx-auto text-center"
         >
           <img
             class="max-w-sm mx-auto"
-            src="img/alasan-1.png"
+            src="img/alasan-3.png"
             alt="Gambar Card"
           />
-          <div class="px-6 py-4">
-            <div class="font-custom font-bold text-xl mb-2">Judul Card</div>
-            <p class="text-gray-700 text-base font-custom">
-              Deskripsi singkat mengenai card ini. Anda dapat menambahkan
-              beberapa kalimat untuk memberikan informasi lebih lanjut.
+          <div class="px-6 py-5">
+            <div class="font-custom font-semibold text-lg md:text-xl mb-2">
+              Mitra Perusahaan Inklusif
+            </div>
+            <p class="text-gray-700 text-sm md:text-base font-custom">
+              Bekerja sama dengan perusahaan yang inklusif.
             </p>
           </div>
         </div>
         <div
-          class="px-5 max-w-sm rounded overflow-hidden shadow-lg mx-auto text-center"
+          class="px-5 max-w-sm rounded-xl overflow-hidden shadow-lg mx-auto text-center"
         >
           <img
             class="max-w-sm mx-auto"
-            src="img/alasan-1.png"
+            src="img/alasan-4.png"
             alt="Gambar Card"
           />
-          <div class="px-6 py-4">
-            <div class="font-custom font-bold text-xl mb-2">Judul Card</div>
-            <p class="text-gray-700 text-base font-custom">
-              Deskripsi singkat mengenai card ini. Anda dapat menambahkan
-              beberapa kalimat untuk memberikan informasi lebih lanjut.
+          <div class="px-6 py-5">
+            <div class="font-custom font-semibold text-lg md:text-xl mb-2">
+              Komunitas Kuat
+            </div>
+            <p class="text-gray-700 text-sm md:text-base font-custom">
+              Memiliki jangkauan komunitas disabilitas yang kuat.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#CAEAEF] mt-5 px-5">
+    <section class="bg-[#CAEAEF] mt-5 px-12">
       <div
         class="flex justify-center items-center gap-8 relative flex-col md:flex-row py-5"
       >
@@ -198,59 +271,44 @@
           <h2 class="text-xl font-custom font-bold py-3">
             4 Langkah Cepat Untuk Mencapai Jembatan Karirmu
           </h2>
+          <p>Step menuju kesuksesan melewati jembatan karirmu</p>
           <div class="flex mt-5">
             <div class="px-5 bg-[#55BACC] rounded flex items-center">
-              <h3 class="font-bold font-custom text-base xl:text-xl text-white">
-                1
-              </h3>
+              <h3 class="font-bold font-custom text-white">1</h3>
             </div>
-            <p
-              class="p-3 bg-white w-full font-custom text-base xl:text-xl rounded"
-            >
+            <p class="p-3 bg-white w-full font-custom rounded">
               Daftar dan Lengkapi Profil Anda
             </p>
           </div>
           <div class="flex mt-5">
             <div class="px-5 bg-[#55BACC] rounded flex items-center">
-              <h3 class="font-bold font-custom text-base xl:text-xl text-white">
-                1
-              </h3>
+              <h3 class="font-bold font-custom text-white">2</h3>
             </div>
-            <p
-              class="p-3 bg-white w-full font-custom text-base xl:text-xl rounded"
-            >
-              Daftar dan Lengkapi Profil Anda
+            <p class="p-3 bg-white w-full font-custom rounded">
+              Cari dan temukan pekerjaan yang Anda inginkan
             </p>
           </div>
           <div class="flex mt-5">
             <div class="px-5 bg-[#55BACC] rounded flex items-center">
-              <h3 class="font-bold font-custom text-base xl:text-xl text-white">
-                1
-              </h3>
+              <h3 class="font-bold font-custom text-white">3</h3>
             </div>
-            <p
-              class="p-3 bg-white w-full font-custom text-base xl:text-xl rounded"
-            >
-              Daftar dan Lengkapi Profil Anda
+            <p class="p-3 bg-white w-full font-custom rounded">
+              Lamar sekarang juga
             </p>
           </div>
           <div class="flex mt-5">
             <div class="px-5 bg-[#55BACC] rounded flex items-center">
-              <h3 class="font-bold font-custom text-base xl:text-xl text-white">
-                1
-              </h3>
+              <h3 class="font-bold font-custom text-white">4</h3>
             </div>
-            <p
-              class="p-3 bg-white w-full font-custom text-base xl:text-xl rounded"
-            >
-              Daftar dan Lengkapi Profil Anda
+            <p class="p-3 bg-white w-full font-custom rounded">
+              Lamar pekerjaan berhasil dan tunggu informasi selanjutnya
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 px-5">
+    <section class="py-12 px-12">
       <div class="text-center">
         <h2 class="font-bold text-xl xl:text-3xl font-custom">
           Dukungan dan Komunitas
@@ -259,26 +317,49 @@
           Jembatan Karir didukung oleh komunitas dan mitra yang inklusif
         </p>
       </div>
-      <div class="flex overflow-hidden relative">
-        <div
-          class="carousel flex transition-transform ease-in-out duration-300 transform"
-        >
-          <img class="w-full" src="img/innovillage.png" alt="Image 1" />
-          <img class="w-full" src="img/telkom-univ.png" alt="Image 2" />
-          <img class="w-full" src="img/wiyata-guna.png" alt="Image 3" />
-          <img class="w-full" src="img/bojongsoang.png" alt="Image 4" />
+      <div class="wrapper py-3 overflow-hidden">
+        <div class="sliderAx h-auto">
+          <div id="slider-1" class="container mx-auto">
+            <div
+              class="bg-cover flex justify-center gap-12 md:gap-24 bg-center text-white py-24 px-10 object-fill"
+            >
+              <img src="img/innovillage.png" alt="" class="w-fit h-fit" />
+              <img src="img/bojongsoang.png" alt="" class="w-fit" />
+            </div>
+          </div>
+
+          <div id="slider-2" class="container mx-auto">
+            <div
+              class="bg-cover flex justify-center gap-12 md:gap-24 bg-top text-white py-24 px-10 object-fill"
+            >
+              <img src="img/wiyata-guna.png" alt="" class="w-fit" />
+              <img src="img/telkom-univ.png" alt="" class="w-fit h-fit" />
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-between w-12 mx-auto pb-2">
+          <button
+            id="sButton1"
+            onclick="sliderButton1()"
+            class="bg-[#CAEAEF] rounded-full w-4 pb-2"
+          ></button>
+          <button
+            id="sButton2"
+            onclick="sliderButton2() "
+            class="bg-[#CAEAEF] rounded-full w-4 p-2"
+          ></button>
         </div>
       </div>
     </section>
 
-    <section class="container mx-auto">
+    <section class="px-12 container mx-auto">
       <div class="text-center">
         <p class="text-2xl font-bold font-custom">Apa Kata Mereka?</p>
         <p class="text-base">
           Kata mereka yang telah mengubah hidup dan mewujudkan mimpinya
         </p>
       </div>
-      <div class="flex justify-center items-center space-x-10">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-5">
         <div
           class="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-lg p-6 mt-10"
         >
@@ -289,12 +370,14 @@
             width="50px"
           />
           <div class="mt-6 text-center">
-            <p class="text-sm text-gray-600">
+            <p class="text-gray-600">
               “Meskipun saya tidak bisa berjalan, tetapi saya berhasil
               mendapatkan pekerjaan sebagai seorang Developer di perusahaan
               start up”
             </p>
-            <p class="text-lg font-semibold text-gray-800">Anton Wijayanto</p>
+            <p class="text-lg py-3 font-semibold text-gray-800">
+              Anton Wijayanto
+            </p>
           </div>
         </div>
         <div
@@ -308,11 +391,12 @@
           />
           <div class="mt-6 text-center">
             <p class="text-sm text-gray-600">
-              “Meskipun saya tidak bisa berjalan, tetapi saya berhasil
-              mendapatkan pekerjaan sebagai seorang Developer di perusahaan
-              start up”
+              “Saya saat ini berkesempatan untuk dapat bekerja di kafe sebagai
+              barista, mendapatkan dukungan dan kenyamanan dalam bekerja.”
             </p>
-            <p class="text-lg font-semibold text-gray-800">Anton Wijayanto</p>
+            <p class="text-lg py-3 font-semibold text-gray-800">
+              Rudi Bahrudin
+            </p>
           </div>
         </div>
         <div
@@ -326,59 +410,66 @@
           />
           <div class="mt-6 text-center">
             <p class="text-sm text-gray-600">
-              “Meskipun saya tidak bisa berjalan, tetapi saya berhasil
-              mendapatkan pekerjaan sebagai seorang Developer di perusahaan
-              start up”
+              “Aku tidak pernah menyangka meskipun memiliki keterbatasan dalam
+              berjalan, tetapi aku tetap bisa bekerja sebagai freelancer
+              designer grafis.”
             </p>
-            <p class="text-lg font-semibold text-gray-800">Anton Wijayanto</p>
+            <p class="text-lg font-semibold py-3 text-gray-800">
+              Nafisa Amalia
+            </p>
           </div>
         </div>
       </div>
+      <div class="mx-auto flex justify-center items-center mt-5">
+        <button
+          class="px-5 py-3 bg-[#55BACC] hover:bg-[#4da7b8] hover:font-semibold rounded-md text-white"
+        >
+          Lihat Lebih Banyak
+        </button>
+      </div>
     </section>
 
-    <section class="container mx-auto py-12">
-      <div class="bg-[#55BACC] rounded-lg flex justify-between items-center">
-        <div class="p-5">
-          <p class="font-bold font-custom text-3xl text-white">
+    <section class="container mx-auto px-12 py-12">
+      <div class="p-8 bg-[#55BACC] rounded-lg flex flex-col md:flex-row gap-5">
+        <div class="my-auto">
+          <p class="font-bold font-custom text-2xl md:text-3xl text-white">
             Wujudkan Mimpimu Menjadi Nyata, Karena Kesempatan Selalu Ada Untukmu
           </p>
-          <p class="text-base text-white">
+          <p class="text-base md:text-lg text-white">
             Bergabung bersama kami dan wujudkan mimpi.
           </p>
-          <div class="flex items-center space-x-2 py-5">
+          <div class="flex items-center gap-2 py-5">
             <button
-              class="bg-white text-teal-400 font-custom font-semibold p-3 rounded"
+              class="bg-white text-[#55BACC] font-custom font-semibold p-3 rounded"
             >
               Mulai Sekarang
             </button>
             <button
-              class="bg-white text-teal-400 font-custom font-semibold p-3 rounded"
+              class="text-white bg-transparent border-white font-custom font-semibold p-3 rounded"
             >
               Tanya Kami
             </button>
           </div>
         </div>
 
-        <div class="mx-auto">
-          <img src="img/banner-3.png" alt="Banner 3" width="500px" />
-        </div>
+        <img src="img/banner-3.png" alt="Banner 3" class="w-fit" />
       </div>
     </section>
 
-    <footer class="bg-[#1E4147]">
+    <footer class="bg-teal-950 px-12">
       <div
-        class="w-96 h-80 px-40 py-16 justify-start items-start gap-32 inline-flex"
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16"
       >
-        <div class="flex-col justify-start items-start gap-10 inline-flex">
-          <img class="w-72 h-14" src="img/logo-jembatan-karir.png" />
+        <div class="flex flex-col justify-start items-start gap-10">
+          <img class="w-50 max-w-xs" src="img/logo-jembatan-karir.png" />
           <div class="flex-col justify-start items-center gap-2 flex">
             <div
-              class="w-80 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
             >
               Copyright © 2023 Jembatan Karir ltd.
             </div>
             <div
-              class="w-80 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+              class="w-full max-w-md text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
             >
               All rights reserved
             </div>
@@ -390,91 +481,89 @@
             <div class="w-8 h-8 relative"></div>
           </div>
         </div>
-        <div class="justify-start items-start gap-7 flex">
-          <div class="flex-col justify-start items-start gap-6 inline-flex">
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Company
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
             <div
-              class="w-40 text-white text-xl font-semibold font-['Inter'] leading-7"
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
             >
-              Company
+              About us
             </div>
-            <div class="flex-col justify-start items-start gap-3 flex">
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                About us
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Blog
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Contact us
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Pricing
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Testimonials
-              </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Blog
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Contact us
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Pricing
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Testimonials
             </div>
           </div>
-          <div class="flex-col justify-start items-start gap-6 inline-flex">
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Support
+          </div>
+          <div class="flex-col justify-start items-start gap-3">
             <div
-              class="w-40 text-white text-xl font-semibold font-['Inter'] leading-7"
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
             >
-              Support
+              Help center
             </div>
-            <div class="flex-col justify-start items-start gap-3 flex">
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Help center
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Terms of service
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Legal
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Privacy policy
-              </div>
-              <div
-                class="w-40 text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Status
-              </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Terms of service
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Legal
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Privacy policy
+            </div>
+            <div
+              class="text-slate-50 text-sm font-normal font-['Inter'] leading-tight"
+            >
+              Status
             </div>
           </div>
-          <div class="flex-col justify-start items-start gap-6 inline-flex">
+        </div>
+        <div class="flex-col justify-start items-start gap-7">
+          <div
+            class="text-white text-xl font-semibold font-['Inter'] leading-7"
+          >
+            Stay up to date
+          </div>
+          <div class="w-64 h-10 relative">
             <div
-              class="w-40 text-white text-xl font-semibold font-['Inter'] leading-7"
+              class="w-64 h-10 left-0 top-0 absolute opacity-20 bg-white rounded-lg"
+            ></div>
+            <div class="w-4 h-4 left-[225px] top-[11px] absolute"></div>
+            <div
+              class="left-[12px] top-[9px] absolute text-gray-300 text-sm font-normal font-['Inter'] leading-tight"
             >
-              Stay up to date
-            </div>
-            <div class="w-64 h-10 relative">
-              <div
-                class="w-64 h-10 left-0 top-0 absolute opacity-20 bg-white rounded-lg"
-              ></div>
-              <div class="w-4 h-4 left-[225px] top-[11px] absolute"></div>
-              <div
-                class="left-[12px] top-[9px] absolute text-gray-300 text-sm font-normal font-['Inter'] leading-tight"
-              >
-                Your email address
-              </div>
+              Your email address
             </div>
           </div>
         </div>
@@ -482,11 +571,44 @@
     </footer>
 
     <script>
-      const navLinks = document.querySelector(".nav-links");
-      function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[20%]");
+      const navLinks = $(".nav-links");
+
+      navLinks.show();
+      if ($(window).width() < 768) {
+        navLinks.hide();
       }
+
+     
+      function onToggleMenu(e) {
+        if ($(window).width() < 768) {
+          navLinks.hide();
+          if (e.name === "menu") {
+            e.name = "close";
+            navLinks.show();
+            navLinks.addClass("top-[100%]");
+          } else {
+            navLinks.removeClass("top-[100%]");
+            navLinks.hide();
+            e.name = "menu";
+          }
+        }
+      }
+
+      onToggleMenu();
+
+      $(document).ready(function () {
+        const $carousel = $(".carousel");
+        const cardWidth = $(".card").outerWidth() + 4; // Added 4 for the gap
+        const scrollAmount = cardWidth;
+
+        $("#right").on("click", function () {
+          $carousel.animate({ scrollLeft: "+=" + scrollAmount }, "fast");
+        });
+
+        $("#left").on("click", function () {
+          $carousel.animate({ scrollLeft: "-=" + scrollAmount }, "fast");
+        });
+      });
     </script>
   </body>
 </html>

@@ -12,7 +12,7 @@
     />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+  <body class="text-gray-800 font-custom bg-gray-50">
     <div class="md:grid grid-cols-12">
       <div class="col-span-4">
         <div class="bg-[#55BACC] h-screen flex flex-col items-start px-5">
@@ -27,8 +27,8 @@
           </div>
         </div>
       </div>
-      <div class="col-span-8 p-10 mx-auto">
-        <div class="mx-auto px-5 py-8 border rounded-lg">
+      <div class="col-span-8 p-10 mx-auto my-auto">
+        <div class="bg-white mx-auto px-5 py-8 border rounded-lg">
           <h1
             class="px-8 font-bold text-xl md:text-2xl font-custom text-center"
           >
@@ -37,12 +37,12 @@
           <p class="px-8 text-sm md:text-base font-custom text-center mt-2">
             Masuk dengan menggunakan email dan password
           </p>
-          <form>
+          <form class="mt-4">
             <!-- Email Field -->
             <div class="mb-4">
               <label
                 for="email"
-                class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                class="block md:text-base font-custom text-sm font-medium text-gray-600"
                 >Email</label
               >
               <input
@@ -50,15 +50,15 @@
                 id="email"
                 name="email"
                 placeholder="Masukkan Email Anda"
-                class="mt-1 p-2 w-full border rounded-md"
+                class="mt-1 p-2 w-full border rounded-md text-sm md:text-base"
               />
             </div>
 
             <!-- Password Field -->
-            <div class="mb-4">
+            <div class="mb-2">
               <label
                 for="password"
-                class="block md:text-xl font-custom text-sm font-medium text-gray-600"
+                class="block md:text-base font-custom text-sm font-medium text-gray-600"
                 >Password</label
               >
               <input
@@ -66,14 +66,16 @@
                 id="password"
                 name="password"
                 placeholder="Masukkan Password Anda"
-                class="mt-1 p-2 w-full border rounded-md"
+                class="mt-1 p-2 w-full border rounded-md text-sm md:text-base"
               />
             </div>
-
+            <div class="flex justify-end items-center mb-4">
+              <a href="" class="text-sm md:text-base">Lupa Password?</a>
+            </div>
             <!-- Submit Button -->
             <button
               type="submit"
-              class="bg-[#55ABCC] font-custom hover:bg-[#33707A] text-white p-2 rounded-md w-full"
+              class="bg-[#55ABCC] font-custom font-semibold hover:bg-[#4da7b8] text-white p-2 rounded-md w-full"
             >
               Masuk
             </button>

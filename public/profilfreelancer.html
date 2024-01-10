@@ -76,7 +76,7 @@
 
     <section class="flex justify-center items-center px-5 py-5 w-3/4 mx-auto">
       <div class="flex flex-col md:flex-row w-full gap-5">
-        <div class="w-full md:w-2/5">
+        <div id="menu" class="w-full md:w-2/5 section">
           <div
             class="bg-white mx-auto rounded-md flex justify-start items-center border p-5 gap-5"
           >
@@ -128,7 +128,7 @@
         <div id="content-container" class="bg-white md:w-3/5">
           <div
             id="produk-content"
-            class="border rounded-md mx-auto gap-5 px-5 py-5"
+            class="content-section border rounded-md mx-auto gap-5 px-5 py-5"
           >
             <div class="flex justify-start items-center space-x-3">
               <ion-icon
@@ -391,7 +391,7 @@
           </div>
           <div
             id="kelola-content"
-            class="border rounded-md mx-auto gap-5 px-5 py-5"
+            class="content-section border rounded-md mx-auto gap-5 px-5 py-5"
           >
             <div class="flex justify-start items-center space-x-3">
               <ion-icon
@@ -454,7 +454,7 @@
               </div>
             </div>
 
-            <div id="konfirmasi-content" class="status-content hidden">
+            <div id="konfirmasi-content" class="status-content">
               <!-- Isi konten untuk status "Konfirmasi" -->
               Konten Konfirmasi
             </div>
@@ -616,11 +616,12 @@
         $("#menu [data-content-id]").on("click", function () {
           // Hide all content sections
           // Get the content ID associated with the clicked menu item
+          $(".content-section").hide();
           var contentId = $(this).data("content-id");
-
           // Show the corresponding content section
           $("#" + contentId).show();
         });
+
         // Function to toggle visibility of content based on status
         function toggleStatusContent(statusId) {
           $(".hidden").hide(); // Hide all content

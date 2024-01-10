@@ -12,7 +12,7 @@
     />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+  <body class="text-sm md:text-base text-gray-800 bg-gray-50 font-custom">
     <div class="md:grid grid-cols-12">
       <div class="col-span-4">
         <div class="bg-[#55BACC] h-screen flex flex-col items-start px-5">
@@ -22,22 +22,26 @@
               Selamat Datang
             </h1>
             <p class="text-base text-white font-custom">
-              Sesuaikan referensi Anda untuk mendapatkan apa yang Anda inginkan
+              Mari bergabung dengan kami dan dapatkan kesempatan untukmu
             </p>
           </div>
         </div>
       </div>
-      <div class="col-span-8 p-10 mx-auto">
-        <div class="mx-auto px-5 py-8 border rounded-lg">
-          <h1 class="px-8 font-bold text-xl md:text-2xl font-custom text-center">Daftar</h1>
+      <div class="col-span-8 p-10 mx-auto my-auto">
+        <div class="bg-white mx-auto px-5 py-8 border rounded-lg">
+          <h1
+            class="px-8 font-bold text-xl md:text-2xl font-custom text-center"
+          >
+            Daftar
+          </h1>
           <p class="px-8 text-sm md:text-base font-custom text-center mt-2">
             Daftar dengan menggunakan email dan password
           </p>
-          <form>
+          <form class="mt-4">
             <!-- Email Field -->
             <div class="mb-4">
-              <label for="email" class="block text-sm font-medium text-gray-600"
-                >Email:</label
+              <label for="email" class="block font-medium text-gray-600"
+                >Email</label
               >
               <input
                 type="email"
@@ -48,12 +52,23 @@
               />
             </div>
 
+            <div class="mb-4">
+              <label for="username" class="block font-medium text-gray-600"
+                >Username</label
+              >
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Masukkan Username Anda"
+                class="mt-1 p-2 w-full border rounded-md"
+              />
+            </div>
+
             <!-- Password Field -->
             <div class="mb-4">
-              <label
-                for="password"
-                class="block text-sm font-medium text-gray-600"
-                >Password:</label
+              <label for="password" class="block font-medium text-gray-600"
+                >Password</label
               >
               <input
                 type="password"
@@ -68,8 +83,8 @@
             <div class="mb-6">
               <label
                 for="confirmPassword"
-                class="block text-sm font-medium text-gray-600"
-                >Konfirmasi Password:</label
+                class="block font-medium text-gray-600"
+                >Konfirmasi Password</label
               >
               <input
                 type="password"
@@ -83,14 +98,14 @@
             <!-- Submit Button -->
             <button
               type="submit"
-              class="bg-[#55ABCC] font-custom text-white p-2 rounded-md w-full"
+              class="bg-[#55ABCC] hover:bg-[#4da7b8] font-semibold font-custom text-white p-2 rounded-md w-full"
             >
               Daftar
             </button>
           </form>
 
           <div class="text-center py-3">
-            <p class="font-custom text-base">
+            <p>
               Sudah punya akun?
               <a
                 href="#"

@@ -12,7 +12,7 @@
     />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+  <body class="text-gray-800 bg-gray-50 font-custom">
     <div class="md:grid grid-cols-12">
       <div class="col-span-4">
         <div class="bg-[#55BACC] h-screen flex flex-col items-start px-5">
@@ -27,13 +27,13 @@
           </div>
         </div>
       </div>
-      <div class="col-span-8 p-10 mx-auto">
-        <div class="mx-auto px-5 py-8 border rounded-lg">
-          <h1 class="px-8 font-bold font-custom">
+      <div class="col-span-8 p-10 mx-auto my-auto">
+        <div class="bg-white mx-auto p-8 w-fit border rounded-lg">
+          <h1 class="text-center mb-4 font-bold font-custom">
             Gabung sebagai mitra atau pencari kerja?
           </h1>
-          <div class="px-5 py-5 flex-col xl:flex-row gap-5">
-            <div class="text-center p-8 border rounded-md">
+          <div class="px-3 py-3 flex flex-col md:flex-row gap-3">
+            <div class="text-center px-5 py-5 mx-auto border rounded-md">
               <div class="flex justify-center items-center gap-40">
                 <img src="img/klien-1.png" alt="" />
                 <input
@@ -43,13 +43,13 @@
                   class="h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300 rounded"
                 />
               </div>
-              <p class="mx-auto font-custom text-base py-2">
-                Saya ingin mencari seseorang
+              <p class="mx-auto font-custom text-sm md:text-base py-2">
+                Saya ingin mencari klien
               </p>
             </div>
-            <div class="text-center p-8 border rounded-md mt-3">
+            <div class="text-center px-5 py-5 mx-auto border rounded-md">
               <div class="flex justify-center items-center gap-40">
-                <img src="img/klien-1.png" alt="" />
+                <img src="img/klien-2.png" alt="" />
                 <input
                   type="radio"
                   id="radioOption1"
@@ -57,20 +57,27 @@
                   class="h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300 rounded"
                 />
               </div>
-              <p class="mx-auto font-custom text-base py-2">
-                Saya ingin mencari seseorang
+              <p class="mx-auto font-custom text-sm md:text-base py-2">
+                Saya ingin mencari pekerjaan
               </p>
             </div>
           </div>
-          <div class="mx-auto flex justify-center">
+          <div class="mx-auto flex justify-center py-3">
             <button
-              class="font-custom font-semibold text-white bg-[#55ABCC] px-5 py-3 rounded-full mx-auto"
+              class="font-custom w-full font-semibold text-white bg-[#55ABCC] hover:bg-[#4da7b8] py-2 rounded-md mx-auto"
             >
               Daftar
             </button>
           </div>
           <div class="text-center py-3">
-            <p class="font-custom text-base">Sudah punya akun? <a href="#" class="font-semibold font-custom cursor-pointer text-[#55ABCC]">Masuk Disini</a></p>
+            <p class="font-custom text-sm md:text-base">
+              Sudah punya akun?
+              <a
+                href="#"
+                class="font-semibold font-custom cursor-pointer text-[#55ABCC]"
+                >Masuk Disini</a
+              >
+            </p>
           </div>
         </div>
       </div>
